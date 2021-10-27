@@ -15,12 +15,6 @@ public class EnemySpawner : MonoBehaviour
     
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +28,10 @@ public class EnemySpawner : MonoBehaviour
         if(Tanks.Count >= 10)
         {
             spawnRate = 100;
+        }
+        else
+        {
+            spawnRate = 4.6f;
         }
 
     }

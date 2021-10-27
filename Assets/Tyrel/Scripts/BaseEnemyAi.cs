@@ -23,8 +23,9 @@ public class BaseEnemyAi : MonoBehaviour
     public GameObject point1 = null;
     public GameObject point2 = null;
 
-
-    
+    public GameObject tank = null;
+    Vector3 ScaleChange = Vector3.zero;
+    public float left = 0.5f, right = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class BaseEnemyAi : MonoBehaviour
         if (!isShooting)
         {
             transform.Translate(dir * moveSpeed * Time.deltaTime);
-
+            
         }
         else
         {
@@ -52,10 +53,14 @@ public class BaseEnemyAi : MonoBehaviour
         if (transform.position.x <= point1.transform.position.x)
         {
             dir = Vector3.right;
+            ScaleChange = new Vector3(0.5f, 0.5f, 0.5f);
+            tank.transform.localScale = ScaleChange;
         }
         else if (transform.position.x >= point2.transform.position.x)
         {
             dir = Vector3.left;
+            ScaleChange = new Vector3(-0.5f, 0.5f, 0.5f);
+            tank.transform.localScale = ScaleChange;
         }
 
 
@@ -74,12 +79,6 @@ public class BaseEnemyAi : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
-
-   
 
 
     IEnumerator FireBullet()
