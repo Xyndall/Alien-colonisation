@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PeopleAi : MonoBehaviour
 {
+    SpriteRenderer sr;
+
     // People Speed 
     public float walkingSpeed = 2;
     public float runningSpeed = 5;
-    public float defaultSpeed = 0;
+    float defaultSpeed = 0;
+   
 
     // People default position 
     float onGround = -0.86f;
@@ -15,35 +18,40 @@ public class PeopleAi : MonoBehaviour
     //Panicked state 
     public bool isPanicked = false;
 
+    float startingPos = 16;
+
     Rigidbody2D rb;
 
     public Animator animator;
 
     public GameObject ufo;
 
-
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        
+        PersonState();
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         PersonState();
 
         if(this.gameObject.transform.position.y > onGround)
         {
-            this.gameObject.transform.Translate(defaultSpeed * Time.deltaTime, 0, 0);
+            this.gameObject.transform.Translate(defaultSpeed, 0, 0);
             
         }
 
-       /* OnDestroy();*/
     }
 
     void PersonState()
     {
+        
         switch (isPanicked)
         {
             case false:
@@ -58,7 +66,6 @@ public class PeopleAi : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D panickedState)
     {
         print("collided");
@@ -67,13 +74,13 @@ public class PeopleAi : MonoBehaviour
 
    
     //not working
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         if(this.gameObject.transform.position == ufo.transform.position)
         {
             Destroy(this.gameObject);
             print("destroyed");
         }
-    }
+    }*/
 }
 

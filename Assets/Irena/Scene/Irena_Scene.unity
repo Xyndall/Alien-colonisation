@@ -313,7 +313,6 @@ GameObject:
   m_Component:
   - component: {fileID: 731986838}
   - component: {fileID: 731986837}
-  - component: {fileID: 731986836}
   - component: {fileID: 731986839}
   m_Layer: 0
   m_Name: Spawn Holder
@@ -322,22 +321,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &731986836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731986835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448788be4bcc4da4fb252c4ab3711524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  person: {fileID: 0}
-  maxPeople: 30
-  leftSpawn: {fileID: 0}
-  rightSpawn: {fileID: 0}
 --- !u!212 &731986837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -417,10 +400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448788be4bcc4da4fb252c4ab3711524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 5819842589565136319, guid: fee1014998a19014ea8271de255e0db5, type: 3}
+  personObj: {fileID: 5819842589565136319, guid: fee1014998a19014ea8271de255e0db5, type: 3}
   maxPeople: 30
-  leftSpawn: {fileID: 1549932781}
-  rightSpawn: {fileID: 1711380900}
+  PersonStore: []
 --- !u!1 &1549932781
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,72 +843,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.000001, y: 3.9999998}
   m_EdgeRadius: 0
---- !u!1001 &2999028219563846894
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 839538976473506036, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: ufo
-      value: 
-      objectReference: {fileID: 1749056572}
-    - target: {fileID: 4823751548459670662, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4823751548459670662, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819842589565136319, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_Name
-      value: person_PH
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621404983467034971, guid: fee1014998a19014ea8271de255e0db5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fee1014998a19014ea8271de255e0db5, type: 3}
