@@ -8,7 +8,7 @@ public class PeopleAi : MonoBehaviour
 
     // People Speed 
     public float walkingSpeed = 2;
-    public float runningSpeed = 5;
+    public float runningSpeed = 8;
     float defaultSpeed = 0;
    
 
@@ -38,20 +38,20 @@ public class PeopleAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        PersonState();
-
-        if(this.gameObject.transform.position.y > onGround)
+        if (this.gameObject.transform.position.y > onGround)
         {
             this.gameObject.transform.Translate(defaultSpeed, 0, 0);
-            
+            animator.SetFloat("Static", 0);
+            animator.SetBool("IsPanicking", true);
         }
 
+        PersonState();
+        
     }
 
     void PersonState()
     {
-        
+      
         switch (isPanicked)
         {
             case false:
@@ -62,6 +62,7 @@ public class PeopleAi : MonoBehaviour
 
             case true:
                 this.gameObject.transform.Translate(runningSpeed * Time.deltaTime, 0, 0);
+                animator.SetBool("IsRunning", true);
                 break;
         }
     }
@@ -72,15 +73,14 @@ public class PeopleAi : MonoBehaviour
         isPanicked = true;
     }
 
-   
-    //not working
-    /*private void OnDestroy()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(this.gameObject.transform.position == ufo.transform.position)
-        {
-            Destroy(this.gameObject);
-            print("destroyed");
-        }
-    }*/
+        sr.flipX = true;
+        walkingSpeed = walkingSpeed * -1;
+        runningSpeed = runningSpeed * -1;
+       
+    }
+
+
 }
 

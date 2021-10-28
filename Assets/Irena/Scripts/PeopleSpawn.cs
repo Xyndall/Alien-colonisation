@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PeopleSpawn : MonoBehaviour
 {
+    
     public GameObject personObj;
     public int maxPeople = 30;
     int peopleCount;
@@ -16,15 +17,14 @@ public class PeopleSpawn : MonoBehaviour
     void Start()
     {  
         SpawnInstantiate();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (maxPeople < 30)
-        {
-            SpawnInstantiate();
-        }
+       
+            
     }
 
     void SpawnInstantiate()
@@ -36,7 +36,7 @@ public class PeopleSpawn : MonoBehaviour
         for (int person = 0; person < maxPeople; person++)
         {
             int pick = Random.Range(0, 2);
-            float offset = Random.Range(10, 50);
+            float offset = Random.Range(10,80);
             Vector3 spawnPos = new Vector3(locationSpawns[pick] + offset, 0, 0);
             GameObject personcopy = Instantiate(personObj, spawnPos, transform.rotation, personHolder.transform);
             
@@ -44,6 +44,7 @@ public class PeopleSpawn : MonoBehaviour
             personcopy.name = "person" + (person+ 1);
             personcopy.tag = "NPC";
         }   
+      
     }
     
     
