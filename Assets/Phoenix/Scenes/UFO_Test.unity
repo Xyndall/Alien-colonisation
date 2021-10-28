@@ -123,36 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &201894405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 201894406}
-  m_Layer: 0
-  m_Name: BeamPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &201894406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201894405}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.6, z: 0}
-  m_LocalScale: {x: 3.170879, y: 3.170879, z: 3.170879}
-  m_Children: []
-  m_Father: {fileID: 1270295433}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &202679297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,56 +679,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3689e7296717f42a9464a6cb06543d, type: 3}
---- !u!1 &1270295431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5419804571127343587, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-  m_PrefabInstance: {fileID: 5419804570180272740}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1270295433 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5419804571127343597, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-  m_PrefabInstance: {fileID: 5419804570180272740}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1270295436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270295431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4e017f32e25134a97e61391c17d3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beamPoint: {fileID: 201894406}
-  beamPrefab: {fileID: 743498106126011624, guid: 4d76a11205bd3e84dbff1afc0b2ea75f, type: 3}
---- !u!61 &1270295437
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270295431}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.113319874, y: 0.1632936}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.85, y: 6.85}
-    newSize: {x: 6.85, y: 6.85}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.9426355, y: 1.5714622}
-  m_EdgeRadius: 0
 --- !u!1 &1809133576
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,14 +872,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4752290491147091864, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-      propertyPath: beamPrefab
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4752290491147091864, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-      propertyPath: beamPoint
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5419804571127343587, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
       propertyPath: m_Name
       value: UFO
@@ -1007,14 +919,6 @@ PrefabInstance:
     - target: {fileID: 5419804571127343597, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419804571127343599, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419804571127343599, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33459729ccc7c4c4b8b76a983bea0300, type: 3}
