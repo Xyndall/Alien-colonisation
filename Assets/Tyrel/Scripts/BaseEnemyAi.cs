@@ -7,10 +7,10 @@ public class BaseEnemyAi : MonoBehaviour
     public GameObject player = null;
     public GameObject Bullet = null;
     
-    public float fireRate = 5;
-    public float maxFireRate = 5;
+    public float fireRate = 3;
+    public float maxFireRate = 3;
 
-    public float bulletSpeed = 5;
+    public float bulletSpeed = 100;
 
     
     Rigidbody2D rb = null;
@@ -25,12 +25,13 @@ public class BaseEnemyAi : MonoBehaviour
 
     public GameObject tank = null;
     Vector3 ScaleChange = Vector3.zero;
-    public float left = 0.5f, right = 0.5f;
+
+    TankAudio tankShoot;
 
     // Start is called before the first frame update
     void Start()
     {
-        player.GetComponent<Transform>();
+        
         
         moveSpeed = maxMoveSpeed;
         
@@ -68,6 +69,9 @@ public class BaseEnemyAi : MonoBehaviour
         {
             isShooting = true;
             StartCoroutine(FireBullet());
+            
+            
+            
         }
         else
         {
@@ -80,19 +84,22 @@ public class BaseEnemyAi : MonoBehaviour
     }
 
 
+    
+
+
 
     IEnumerator FireBullet()
     {
         fireRate = maxFireRate;
         yield return new WaitForSeconds(fireRate);
-
         
+        bulletSpeed = Random.Range(100, 200);
         GameObject instBullet = Instantiate(Bullet, transform.position, player.transform.rotation);
         rb = instBullet.GetComponent<Rigidbody2D>();
         Vector2 dir = player.transform.position - instBullet.transform.position;
         rb.AddForce(dir * bulletSpeed);
 
-        Debug.Log("fire");
+        
 
         
     }

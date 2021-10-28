@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52174039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.29, y: -1.31, z: -6.859346}
+  m_LocalPosition: {x: 9.85, y: -1.31, z: -6.859346}
   m_LocalScale: {x: 2, y: 46.87, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -444,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428423774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.12, y: -1.31, z: -6.859346}
+  m_LocalPosition: {x: -9.81, y: -1.31, z: -6.859346}
   m_LocalScale: {x: 2, y: 46.87, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -671,9 +671,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e3b54d039cac44d8114a9adc0489d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1305548072137785698, guid: 088d85ceabe77ec44b84fb9dc960193e, type: 3}
   spawnRate: 3
   Tanks: []
+  Player: {fileID: 2002956214}
+  Bullet: {fileID: 2499454146968821587, guid: 619d696a3beaec249a726209da2fce1a, type: 3}
+  point1: {fileID: 6910648720129947259, guid: d1bb8f6c4a2d3b64a968a36274b8b8b2, type: 3}
+  point2: {fileID: 7539720241615660798, guid: a03085d12dd17dc4e8b04d234eeb3458, type: 3}
+  enemy: {fileID: 1305548072137785698, guid: 088d85ceabe77ec44b84fb9dc960193e, type: 3}
+  enemy2: {fileID: 1305548072137785698, guid: 8c2aae793f7069a4cbbf6257b45a1035, type: 3}
+  sprites: {fileID: 0}
 --- !u!4 &1984856763
 Transform:
   m_ObjectHideFlags: 0
@@ -688,6 +694,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2002956214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7228513106990992942, guid: 167997a2d2259a94291139f8b05a7c01, type: 3}
+  m_PrefabInstance: {fileID: 429330020535611176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2002956218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002956214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826306ac22e10a847ae8e9b28a4cf0a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &429330020535611176
 PrefabInstance:
   m_ObjectHideFlags: 0
