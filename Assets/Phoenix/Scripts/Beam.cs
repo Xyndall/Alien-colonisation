@@ -25,4 +25,5 @@ public class Beam : MonoBehaviour
         vect = vect.normalized;
         rb.AddForce(vect * attractionForce);
     }
+
 }

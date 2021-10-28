@@ -23,6 +23,15 @@ public class Abduction : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.tag == "NPC")
+        {
+            Debug.Log("Collected");
+            Destroy(other.gameObject);
+        }
+    }
+
     void Abduct()
     {
         //Creates the beam
