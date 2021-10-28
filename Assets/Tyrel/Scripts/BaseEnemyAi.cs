@@ -26,7 +26,10 @@ public class BaseEnemyAi : MonoBehaviour
     public GameObject tank = null;
     Vector3 ScaleChange = Vector3.zero;
 
-    TankAudio tankShoot;
+    
+
+    AudioSource aSource = null;
+    public AudioClip[] aClip = null;
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +87,18 @@ public class BaseEnemyAi : MonoBehaviour
     }
 
 
-    
+    public void TankShoot()
+    {
+        aSource.clip = aClip[0];
+        //TankShootAudio(aClip[0]);
+    }
+
+    void TankShootAudio()
+    {
+
+        aSource.Play();
+
+    }
 
 
 
