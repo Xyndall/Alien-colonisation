@@ -26,6 +26,7 @@ public class Abduction : MonoBehaviour
     void Abduct()
     {
         //Creates the beam
-        Instantiate(beamPrefab, beamPoint.position, beamPoint.rotation);
+      GameObject newBeam = Instantiate(beamPrefab, beamPoint.position, beamPoint.rotation,transform);
+        newBeam.GetComponent<Beam>().Ship = gameObject;
     }
 }

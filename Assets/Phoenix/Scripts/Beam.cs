@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Beam : MonoBehaviour
 {
+    public float attractionForce = 0.1f;
+    public GameObject Ship;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +15,14 @@ public class Beam : MonoBehaviour
     private void Update()
     {
         //Destroy GameObject when clicked
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 1);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        //If it collides with something with NPC Tag is is destroyed
-        if (other.gameObject.tag == "NPC")
-        Destroy(other.gameObject, 1);
-        Destroy(gameObject, 1);
+        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+        Vector3 vect = Ship.transform.position - transform.position;
+        vect = vect.normalized;
+        rb.AddForce(vect * attractionForce);
     }
 }

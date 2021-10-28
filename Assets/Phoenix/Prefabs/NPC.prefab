@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 3025128190918910293}
   - component: {fileID: 3025128190918910314}
   - component: {fileID: 3025128190918910315}
-  - component: {fileID: 3025128190918910295}
   m_Layer: 0
-  m_Name: Practice
+  m_Name: NPC
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +116,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0008373633}
   m_SpriteTilingProperty:
@@ -132,23 +131,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13393202, y: 0.12817909}
   m_EdgeRadius: 0
---- !u!250 &3025128190918910295
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3025128190918910312}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceMagnitude: -10
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 2
-  m_Drag: 0
-  m_AngularDrag: 0
