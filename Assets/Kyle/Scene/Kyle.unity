@@ -503,6 +503,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5743392020453411656, guid: 423e26b1882ce574698c54141973c8c2, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743392020453411656, guid: 423e26b1882ce574698c54141973c8c2, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 8527427728505458987, guid: 423e26b1882ce574698c54141973c8c2, type: 3}
       propertyPath: m_Name
       value: Cloud Particle System
