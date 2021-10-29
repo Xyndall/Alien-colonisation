@@ -13,7 +13,7 @@ public class PeopleAi : MonoBehaviour
    
 
     // People default position 
-    float onGround = -0.86f;
+    float onGround = -4.6f;
   
     //Panicked state 
     public bool isPanicked = false;
@@ -24,7 +24,7 @@ public class PeopleAi : MonoBehaviour
 
     public Animator animator;
 
-    public GameObject ufo;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +75,7 @@ public class PeopleAi : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        sr.flipX = true;
+        this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         walkingSpeed = walkingSpeed * -1;
         runningSpeed = runningSpeed * -1;
        
