@@ -57,13 +57,13 @@ public class BaseEnemyAi : MonoBehaviour
         if (transform.position.x <= point1.transform.position.x)
         {
             dir = Vector3.right;
-            ScaleChange = new Vector3(0.5f, 0.5f, 0.5f);
+            ScaleChange = new Vector3(1, 1, 0.5f);
             tank.transform.localScale = ScaleChange;
         }
         else if (transform.position.x >= point2.transform.position.x)
         {
             dir = Vector3.left;
-            ScaleChange = new Vector3(-0.5f, 0.5f, 0.5f);
+            ScaleChange = new Vector3(-1, 1, 0.5f);
             tank.transform.localScale = ScaleChange;
         }
 
