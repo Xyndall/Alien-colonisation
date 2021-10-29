@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6501805665756859232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6501805665756859234}
+  - component: {fileID: 6501805665756859235}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6501805665756859234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501805665756859232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.4, z: -6.859346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6501805665756859235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501805665756859232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e3b54d039cac44d8114a9adc0489d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 3
+  Tanks: []
+  Player: {fileID: 0}
+  Bullet: {fileID: 2499454146968821587, guid: 619d696a3beaec249a726209da2fce1a, type: 3}
+  point1: {fileID: 6910648720129947259, guid: d1bb8f6c4a2d3b64a968a36274b8b8b2, type: 3}
+  point2: {fileID: 7539720241615660798, guid: a03085d12dd17dc4e8b04d234eeb3458, type: 3}
+  enemy: {fileID: 1305548072137785698, guid: 088d85ceabe77ec44b84fb9dc960193e, type: 3}
+  enemy2: {fileID: 1305548072137785698, guid: 8c2aae793f7069a4cbbf6257b45a1035, type: 3}
+  sprites: {fileID: 0}
