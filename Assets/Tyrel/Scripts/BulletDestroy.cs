@@ -6,10 +6,9 @@ public class BulletDestroy : MonoBehaviour
 {
     public GameObject explosion = null;
     
-    private void Update()
-    {
-        
-    }
+
+    
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,6 +17,7 @@ public class BulletDestroy : MonoBehaviour
             GameObject explode = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(explode, 0.5f);
             Destroy(gameObject);
+            
         }
         
         if (collision.gameObject.CompareTag("Death"))

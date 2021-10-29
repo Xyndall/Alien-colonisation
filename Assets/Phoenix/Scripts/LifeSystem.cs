@@ -29,10 +29,18 @@ public class LifeSystem : MonoBehaviour
         {
             life -= d;
             Destroy(ships[life].gameObject);
-            if (life < 1)
+            if (life <= 0)
             {
                 dead = true;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Bullet")
+        {
+            TakeDamage(1);
         }
     }
 }

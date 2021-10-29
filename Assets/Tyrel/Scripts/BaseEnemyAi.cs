@@ -112,9 +112,9 @@ public class BaseEnemyAi : MonoBehaviour
         rb = instBullet.GetComponent<Rigidbody2D>();
         Vector2 dir = player.transform.position - instBullet.transform.position;
         rb.AddForce(dir * bulletSpeed);
-
         
-
+        
+        
         
     }
 
