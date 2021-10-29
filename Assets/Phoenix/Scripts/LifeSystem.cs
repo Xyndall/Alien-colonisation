@@ -19,7 +19,7 @@ public class LifeSystem : MonoBehaviour
         if (dead == true)
         {
             Debug.Log("Out of Lives");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 

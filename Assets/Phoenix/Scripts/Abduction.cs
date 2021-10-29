@@ -6,6 +6,7 @@ public class Abduction : MonoBehaviour
 {
     public Transform beamPoint;
     public GameObject beamPrefab;
+    public static int Score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,6 @@ public class Abduction : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Abduct();
-            Debug.Log("BEAM");
         }
     }
 
@@ -27,8 +27,8 @@ public class Abduction : MonoBehaviour
     {
         if (other.transform.tag == "NPC")
         {
-            Debug.Log("Collected");
             Destroy(other.gameObject);
+            Score++;
         }
     }
 

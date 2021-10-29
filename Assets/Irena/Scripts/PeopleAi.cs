@@ -38,14 +38,18 @@ public class PeopleAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.transform.position.y > onGround)
+
+        
+        if (this.gameObject.transform.position.y == onGround)
+        {
+             PersonState();
+        }
+        else
         {
             this.gameObject.transform.Translate(defaultSpeed, 0, 0);
             animator.SetFloat("Static", 0);
             animator.SetBool("IsPanicking", true);
         }
-
-        PersonState();
         
     }
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kyle/Scene/Kyle.unity
     guid: e133881f9f31c9a468a566787ba09435
+  - enabled: 1
+    path: Assets/Kyle/Scene/Win.unity
+    guid: 3dd133bd3e5e7a541936679e36f9faec
   m_configObjects: {}

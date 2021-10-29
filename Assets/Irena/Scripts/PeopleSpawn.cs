@@ -36,7 +36,7 @@ public class PeopleSpawn : MonoBehaviour
         for (int person = 0; person < maxPeople; person++)
         {
             int pick = Random.Range(0, 2);
-            float offset = Random.Range(10,50);
+            float offset = Random.Range(10, 30);
             Vector3 spawnPos = new Vector3(locationSpawns[pick] + offset, -4.6f, 0);
             GameObject personcopy = Instantiate(personObj, spawnPos, transform.rotation, personHolder.transform);
             

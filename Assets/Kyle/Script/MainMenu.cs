@@ -9,11 +9,13 @@ public class MainMenu : MonoBehaviour
 {
     public Text scoretext;
     public PlayableDirector startcutscnce;
+    public Abduction ABD = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoretext.text = "200";
+        scoretext.text = "Sorce: " + Abduction.Score.ToString();
+        
     }
 
     // Update is called once per frame
